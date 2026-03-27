@@ -12,3 +12,4 @@ def testCardChecker(): #Testing the custom library
 
 if __name__ == "__main__": #Test starts when main is run
     testCardChecker()
+
