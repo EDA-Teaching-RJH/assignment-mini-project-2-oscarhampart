@@ -1,6 +1,7 @@
 from cardChecker import isValidCard #Imported so I can check if the inputted card is valid or not
 from deck import Deck #Imported so we can use the deck to deal the cards to the players
 from players import User, AI #Imported so we can have the players being the user and the AI to play against each other. 
+from leaderboard import saveScore #Importing leaderboard so the players score can be saved 
 
 def main():
     deck = Deck() #Creating the deck of cards
@@ -19,6 +20,8 @@ def main():
         print("Valid.")
     else:
         print("Invalid.")
+
+    saveScore(human.name, human.balance) #This function is called to save the score of the player to the leaderboard
 
 if __name__ == "__main__": #Script is being run as the main program
     main()
